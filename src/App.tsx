@@ -3,32 +3,50 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const categories = [
+        'daily habits',
+        'wellness',
+        'learning',
+        'play time',
+    ]
+    const habits = [
+        {
+            category: 'daily habits',
+            name: 'Wake up early',
+        },
+        {
+            category: 'daily habits',
+            name: 'Cook lunch',
+        },
+        {
+            category: 'daily habits',
+            name: 'Journal',
+        },
+        {
+            category: 'wellness',
+            name: 'Meditate',
+        },
+        {
+            category: 'learning',
+            name: 'Read books',
+        },
+    ]
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        {categories.map(category => <div>{category}</div>)}
     </div>
   )
 }
 
 export default App
+
+/**
+ * list out the hardcoded data
+ * move the hardcoded data into the mock file
+ * pretty up the landing page a bit
+ * 
+ * look into router/routing for react
+ * start creating the settings page
+ * begin shifting from mock to localStorage
+ */

@@ -1,0 +1,66 @@
+Name
+Tracked Daily
+Categorize 
+Completion.
+
+
+[Habit]
+(id)
+Name
+@Category
+<repeat-frequency> // which days/times should this be done
+<weekly-target-repeat> // how many times per week should this be done
+
+[Completion]
+@Habit
+date
+
+[Category]
+Name
+Color
+
+-----------------------------------------------------------
+
+Local Storage
+--------------
+(WebStorage API https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+LocalStorage API
+SessionStorage API
++ easier
+- less broad applications
+- can be deleted easily
+
+
+Relational Database
+---------------
+- more complex (requires a backend + database or third party like firebase/lambdas + data store)
++ can save data and load it on different browsers and computers
++ will not be easily deleted accidentally
+
+Types of Databases
+---
+* Relational (SQL - Structured Query Language)
+* Document Store (NoSQL - Not only SQL)
+* Graph Databases
+* Vector Databases
+
+-------------------------------------------------------------
+
+<Loading Screen>
+<Login Screen>
+
+[Landing Page] - what do uses see when they first open the applications
+// overview of most relevant data for users to see
+
+[Settings Page]
+* Create/Edit/Delete Categories
+* Create/Edit/Delete Habits
+
+[Detail/Trends Page]
+* See data over time
+* Filter by Habit
+* (Look at ways to represent boolean data over time)
+    * Graph view - how many days out of the week was a given habit reached
+    * Calendar view - how many days were all selected habits achieved
+
+
