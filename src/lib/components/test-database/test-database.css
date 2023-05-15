@@ -23,6 +23,7 @@ form {
 
 [data-form-item]:has(.delete) {
   grid-template-columns: 1rem 1fr;
+  text-align: left;
 }
 
 [data-form-item]:has(.subtitle) {
@@ -31,10 +32,6 @@ form {
 
 [data-form-item]:has(.delete):has(.subtitle) {
   grid-template-columns: 1rem 1fr 1fr;
-}
-
-[data-form-item]:has(.delete) {
-  text-align: left;
 }
 
 [data-form-item] > .subtitle {

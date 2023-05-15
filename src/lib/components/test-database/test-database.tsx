@@ -11,7 +11,7 @@ const createHabit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formElement = e.target
     const { 0: newHabitElement, 1: categorySelectElement } = formElement
-    const [newHabitName, category] = [newHabitElement.value, categorySelectElement.value]
+    const [ newHabitName, category ] = [newHabitElement.value, categorySelectElement.value]
 
     database.createHabit( newHabitName, category )
 }
