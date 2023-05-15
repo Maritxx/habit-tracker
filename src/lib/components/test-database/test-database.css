@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+[data-form-item], button, input {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+[data-form-item] {
+  display: grid;
+  gap: 1rem;
+}
+
+[data-form-item]:has(.delete) {
+  grid-template-columns: 1rem 1fr;
+  text-align: left;
+}
+
+[data-form-item]:has(.subtitle) {
+  grid-template-columns: 1fr 1fr;
+}
+
+[data-form-item]:has(.delete):has(.subtitle) {
+  grid-template-columns: 1rem 1fr 1fr;
+}
+
+[data-form-item] > .subtitle {
+  text-align: right;
+}
+
+[data-form-item]:not(:has(.delete, .subtitle)) {
+  text-align: center;
+}
